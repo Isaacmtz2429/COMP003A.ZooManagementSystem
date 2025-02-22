@@ -1,4 +1,10 @@
-﻿namespace COMP003A.ZooManagementSystem
+﻿/*
+// Author: Isaac Martinez
+// Course: COMP-003
+// Faculty: Jonathan Cruz
+// Purpose: Zoo management system demonstrating inheritance, abstraction, polymorphism, and method overloading in C#.
+*/
+namespace COMP003A.ZooManagementSystem
 {
     internal class Program
     {
