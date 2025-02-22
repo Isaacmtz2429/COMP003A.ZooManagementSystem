@@ -40,5 +40,22 @@ namespace COMP003A.ZooManagementSystem
         }
 
         public abstract void MakeSound();
+
+        public class Lion : Animal
+        {
+            public Lion(string name, string species) : base(name, species) { }
+            public override void MakeSound()
+            {
+                Console.WriteLine("The lion roars!");
+            }
+        }
+        public class Parrot : Animal
+        {
+            public Parrot(string name, string species) : base(name, species) { }
+            public override void MakeSound()
+            {
+                Console.WriteLine("The parrot squawks!");
+            }
+        }
     }
 }
