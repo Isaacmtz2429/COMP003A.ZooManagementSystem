@@ -38,5 +38,7 @@ namespace COMP003A.ZooManagementSystem
             Name = name;
             Species = species;
         }
+
+        public abstract void MakeSound();
     }
 }
