@@ -16,8 +16,8 @@ namespace COMP003A.ZooManagementSystem
         {
             while (true)
             {
-                Console.WriteLine("\nWelcome to the Zoo Managment System!");
-                Console.WriteLine("Please choose an option:");
+                Console.WriteLine("Welcome to the Zoo Managment System!");
+                Console.WriteLine("\nPlease choose an option:");
                 Console.WriteLine("1. Add a Lion");
                 Console.WriteLine("2. Add a Parrot");
                 Console.WriteLine("3. Display All Animals");
