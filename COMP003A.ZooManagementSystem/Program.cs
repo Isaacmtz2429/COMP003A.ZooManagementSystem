@@ -16,13 +16,14 @@ namespace COMP003A.ZooManagementSystem
         {
             while (true)
             {
-                Console.WriteLine("Welcome to the Zoo Managment System!");
+                Console.WriteLine("\nWelcome to the Zoo Managment System!");
                 Console.WriteLine("\nPlease choose an option:");
                 Console.WriteLine("1. Add a Lion");
                 Console.WriteLine("2. Add a Parrot");
                 Console.WriteLine("3. Display All Animals");
                 Console.WriteLine("4. Describe an Animal");
                 Console.WriteLine("5. Exit");
+                Console.Write("\nYour Choice: ");
 
                 string choice = Console.ReadLine();
 
@@ -52,15 +53,15 @@ namespace COMP003A.ZooManagementSystem
         {
             try
             {
-                Console.WriteLine("Enter the name of the lion: ");
+                Console.Write("Enter the name of the lion: ");
                 string name = Console.ReadLine();
-                Console.WriteLine("Enter the species of the lion: ");
+                Console.Write("Enter the species of the lion: ");
                 string species = Console.ReadLine();
 
                 Animal lion = new Lion(name, species);
                 animals.Add(lion);
 
-                Console.WriteLine("Lion added successfully!");
+                Console.WriteLine("\nLion added successfully!");
             }
             catch (ArgumentException ex)
             {
@@ -71,15 +72,15 @@ namespace COMP003A.ZooManagementSystem
         {
             try
             {
-                Console.WriteLine("Enter the name of the parrot: ");
+                Console.Write("Enter the name of the parrot: ");
                 string name = Console.ReadLine();
-                Console.WriteLine("Enter the species of the parrot: ");
+                Console.Write("Enter the species of the parrot: ");
                 string species = Console.ReadLine();
 
                 Animal parrot = new Parrot(name, species);
                 animals.Add(parrot);
 
-                Console.WriteLine("Parrot added successfully!");
+                Console.WriteLine("\nParrot added successfully!");
             }
             catch (ArgumentException ex)
             {
@@ -101,10 +102,11 @@ namespace COMP003A.ZooManagementSystem
             Console.WriteLine("1. DescribeAnimal (name only)");
             Console.WriteLine("2. DescribeAnimal (name and species)");
             Console.WriteLine("3. DescribeAnimal (name, species, and age)");
+            Console.Write("\nYour Choice: ");
 
             string choice = Console.ReadLine();
 
-            Console.WriteLine("Enter the name of the animal: ");
+            Console.Write("Enter the name of the animal: ");
             string name = Console.ReadLine();
 
             switch (choice)
@@ -113,14 +115,14 @@ namespace COMP003A.ZooManagementSystem
                     ZooUtility.DescribeAnimal(name);
                     break;
                 case "2":
-                    Console.WriteLine("Enter the species of the animal: ");
+                    Console.Write("Enter the species of the animal: ");
                     string species = Console.ReadLine();
                     ZooUtility.DescribeAnimal(name, species);
                     break;
                 case "3":
-                    Console.WriteLine("Enter the species of the animal: ");
+                    Console.Write("Enter the species of the animal: ");
                     species = Console.ReadLine();
-                    Console.WriteLine("Enter the age of the animal: ");
+                    Console.Write("Enter the age of the animal: ");
                     if (int.TryParse(Console.ReadLine(), out int age))
                     {
                         ZooUtility.DescribeAnimal(name, species, age);
