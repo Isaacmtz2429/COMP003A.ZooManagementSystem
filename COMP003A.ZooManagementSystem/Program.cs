@@ -5,6 +5,7 @@
 // Purpose: Zoo management system demonstrating inheritance, abstraction, polymorphism, and method overloading in C#.
 */
 using System.Diagnostics;
+using static COMP003A.ZooManagementSystem.Animal;
 
 namespace COMP003A.ZooManagementSystem
 {
@@ -45,6 +46,25 @@ namespace COMP003A.ZooManagementSystem
                         Console.WriteLine("Invalid choice, Please try again.");
                         break;
                 }
+            }
+        }
+        static void AddLion()
+        {
+            try
+            {
+                Console.WriteLine("Enter the name of the lion: ");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter the species of the lion: ");
+                string species = Console.ReadLine();
+
+                Animal lion = new Lion(name, species);
+                animals.Add(lion);
+
+                Console.WriteLine("Lion added successfully!");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
     }
