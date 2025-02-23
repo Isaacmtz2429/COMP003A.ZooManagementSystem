@@ -99,10 +99,41 @@ namespace COMP003A.ZooManagementSystem
         {
             Console.WriteLine("Choose an overload:");
             Console.WriteLine("1. DescribeAnimal (name only)");
-            Console.WriteLine("2. DescribeAnimal (name and species)";
+            Console.WriteLine("2. DescribeAnimal (name and species)");
             Console.WriteLine("3. DescribeAnimal (name, species, and age)");
 
             string choice = Console.ReadLine();
+
+            Console.WriteLine("Enter the name of the animal: ");
+            string name = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    ZooUtility.DescribeAnimal(name);
+                    break;
+                case "2":
+                    Console.WriteLine("Enter the species of the animal: ");
+                    string species = Console.ReadLine();
+                    ZooUtility.DescribeAnimal(name, species);
+                    break;
+                case "3":
+                    Console.WriteLine("Enter the species of the animal: ");
+                    species = Console.ReadLine();
+                    Console.WriteLine("Enter the age of the animal: ");
+                    if (int.TryParse(Console.ReadLine(), out int age))
+                    {
+                        ZooUtility.DescribeAnimal(name, species, age);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid age input. ");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
+            }
         }
     }
 }
