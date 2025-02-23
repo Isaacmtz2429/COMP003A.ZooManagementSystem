@@ -95,5 +95,14 @@ namespace COMP003A.ZooManagementSystem
                 Console.WriteLine($"({animal.Name}, {animal.Species})");
             }
         }
+        static void DescribeAnimal()
+        {
+            Console.WriteLine("Choose an overload:");
+            Console.WriteLine("1. DescribeAnimal (name only)");
+            Console.WriteLine("2. DescribeAnimal (name and species)";
+            Console.WriteLine("3. DescribeAnimal (name, species, and age)");
+
+            string choice = Console.ReadLine();
+        }
     }
 }
