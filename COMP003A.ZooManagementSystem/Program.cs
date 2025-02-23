@@ -67,5 +67,24 @@ namespace COMP003A.ZooManagementSystem
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
+        static void AddParrot()
+        {
+            try
+            {
+                Console.WriteLine("Enter the name of the parrot: ");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter the species of the parrot: ");
+                string species = Console.ReadLine();
+
+                Animal parrot = new Parrot(name, species);
+                animals.Add(parrot);
+
+                Console.WriteLine("Parrot added successfully!");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
     }
 }
