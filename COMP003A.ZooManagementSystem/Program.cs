@@ -86,5 +86,14 @@ namespace COMP003A.ZooManagementSystem
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
+        static void DisplayAllAnimals()
+        {
+            Console.WriteLine("Displaying all animals:");
+            foreach(var animal in animals)
+            {
+                animal.MakeSound();
+                Console.WriteLine($"({animal.Name}, {animal.Species})");
+            }
+        }
     }
 }
