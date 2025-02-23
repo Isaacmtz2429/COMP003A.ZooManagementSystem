@@ -4,6 +4,8 @@
 // Faculty: Jonathan Cruz
 // Purpose: Zoo management system demonstrating inheritance, abstraction, polymorphism, and method overloading in C#.
 */
+using System.Diagnostics;
+
 namespace COMP003A.ZooManagementSystem
 {
     internal class Program
@@ -20,6 +22,29 @@ namespace COMP003A.ZooManagementSystem
                 Console.WriteLine("3. Display All Animals");
                 Console.WriteLine("4. Describe an Animal");
                 Console.WriteLine("5. Exit");
+
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        AddLion();
+                        break;
+                    case "2":
+                        AddParrot();
+                        break;
+                    case "3":
+                        DisplayAllAnimals();
+                        break;
+                    case "4":
+                        DescribeAnimal();
+                        break;
+                    case "5":
+                        return;
+                    default:
+                        Console.WriteLine("Invalid choice, Please try again.");
+                        break;
+                }
             }
         }
     }
